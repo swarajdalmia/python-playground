@@ -51,4 +51,11 @@ def same_memory():
 	sentence2 = 'Sally sells sea shells by the sea shore'
 	print(f"the id of strings are : {id(sentence1)} and {id(sentence2)}")
 
-same_memory()
+def mapping():
+	# replacing every letter in a string with a mapping to another
+	# create mapping
+	mapping = str.maketrans("abcs", "123S")
+	# translate string
+	print("abc are the first three letters".translate(mapping))
+
+mapping()

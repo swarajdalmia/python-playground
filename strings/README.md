@@ -32,3 +32,4 @@ Taken from [here](https://towardsdatascience.com/41-questions-to-test-your-knowl
 - reversed(sequence) : returns an iterator that reverses the input sequence which can be a string or a list.
 - str() : convert an interger to a string
 - str.replace(str1, str2) : replaces all instances of str1 with str2 in the string str.
+- find() finds the first instance of the substring from the left and rfind() returns the first instance of the substring from the right.
