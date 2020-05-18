@@ -7,7 +7,7 @@ The simplest subproblems are naive\base cases and larger subproblems are solved 
 
 The *Knapsack probelem* is one of the quientessential problems that can be solved using this approach. The knapsack problem is solved by builing up a table. Each row of the table is filled considering the elements of that row and the optimal solution uptill then, which is contained in the previous row. The granularity of the subproblems is the size of the smallest item. At each level, the optimal knapsack can't be composed on more than 2 subknapsacks. However, each of the subknack sacs might themselves contain two sub knacksacs. the most optimal soluition doesn't need to fill the knapsack completely. 
 
-The *longest common subsequence* is another common problems thats solved using this approach. The formula for filling up the table is different in this case. The value for each element is dependent on the element on the top-left, left and top. The "git diff" command uses a DP approach similar to solving the longest common subsequence.
+The *longest common subsequence* is another common problems thats solved using this approach.  A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.The formula for filling up the table is different in this case. The value for each element is dependent on the element on the top-left, left and top. The "git diff" command uses a DP approach similar to solving the longest common subsequence.
 
 Other examples : (these problems have overlapping subproblems) Fibonacci sequence, Dijkstra's shortest path algorithm. 
 
@@ -23,11 +23,13 @@ If only some of the subproblems need to be solved for the original problem to be
 
 
 ### Solving Heuristic
- There is no one formula for solving a problem using DP. 
+There is no one formula for solving a problem using DP. 
 
 ### Independence of sub-probelms
 The DP approach can only be used when each of the subproblems are discrete and independent of the others. If some subproblem is depedent on another, then the default DP approach can not be used. 
 
 
+### Problems 
 
+ 
 
