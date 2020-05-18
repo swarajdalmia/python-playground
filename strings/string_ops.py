@@ -36,4 +36,19 @@ def formatting():
 	# one can also perform calculations
 	print(f"{45*3}")
 
-formatting()	
+def reversing():
+	example = 'reverse this string'
+	# reversed() returns an iterator(list) that access the sequence in reverse order. Its input can be string or list form.	
+	print("".join(reversed(example)))
+
+def replace():
+	sentence = 'Sally sells sea shells by the sea shore'
+	# replaces instances of sea with mountain
+	sentence.replace('sea', 'mountain')
+
+def same_memory():
+	sentence1 = 'Sally sells sea shells by the sea shore'
+	sentence2 = 'Sally sells sea shells by the sea shore'
+	print(f"the id of strings are : {id(sentence1)} and {id(sentence2)}")
+
+same_memory()
