@@ -27,3 +27,13 @@ def length():
 	print(name[1])
 	print(len(name))
 
+def formatting():
+	# formatting with f-strings 
+	firstname = "Eric"
+	lastname = "bourne"
+	# since the portition inside the braces are evaluated at runtime. One can also call functions withing them !
+	print(f"The name is {firstname} {lastname.title()}")
+	# one can also perform calculations
+	print(f"{45*3}")
+
+formatting()	

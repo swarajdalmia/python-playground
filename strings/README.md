@@ -10,7 +10,11 @@ Python strings are immutable i.e. they cant be edited after they are created. So
 ### Compexity
 Since strings are immutable. String concatenation requires all characters to be copied, this is a O(N+M) operation (where N and M are the sizes of the input strings). Instead concatenation of strings if done more than once should be done with "".join(l\_words) where l\_words stands for a list words. The time complexity is analysed in depth [here](https://waymoot.org/home/python_string/).
 
-### Interesting Questions
+### String Formatting 
+Python 3.6 introduced f-strings, a new way to format strings. Its concise, less prone to error and faster.
+The earlier ways were %-formatting and str.format(). f-strings are string literals that have an f at the beginning and curly braces containing expressions that will be replaced with their values. For more details one can look [here](https://realpython.com/python-f-strings/#option-2-strformat).
+
+### Misc.
 Taken from [here](https://towardsdatascience.com/41-questions-to-test-your-knowledge-of-python-strings-9eb473aa8fe8). 
 - string idenity, ==(checks for equality) vs is(checks for idenity i.e. they both point to the same ref)
 - id() function returns the id of a memory address associated with a name.
