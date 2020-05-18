@@ -31,5 +31,39 @@ The DP approach can only be used when each of the subproblems are discrete and i
 
 ### Problems 
 
+#### Longest Increasing Subsequence: 
+Example : The longest LIS for {10, 22, 9, 33, 21, 50, 41, 60, 80} is {10, 22, 33, 50, 60, 80} and it consists of 6 elements.
  
+Solution : The start of the sequence is 10. Now, one could have been given the string start that starts from 22. Therefore the recurrence relation is such.
+Let n\_LIS[i] be the length of the LIS starting from i and one that includes i. Now:
+
+n\_LIS[i] = 1 + max( n\_LIS[j]) such that i\<j\<n and arr[i] < arr[j]
+if no such j exists 
+n\_LIS[i[ = 1
+
+The time cimplexity is n^2, however there exists an algorithm that does it in nlog(n)
+
+#### Edit Distance 
+Find minimum number of edits (operations) required to convert ‘str1’ into ‘str2’. If the 3 operations of insert, remove, replace cost the same. 
+
+
+if str1[i-1] == str2[j-1]: 
+    dp[i][j] = dp[i-1][j-1]
+
+else: 
+    dp[i][j] = 1 + min(dp[i][j-1],        # Insert 
+                       dp[i-1][j],        # Remove 
+                       dp[i-1][j-1])      # Replace
+
+The time,space complexity if O(n\*m). The space complexity can be reduced, since we require only the elements 
+fromt he above row. therefore the space complexity can be reduced to O(m). 
+
+#### Partition 
+Partition a set into two subsets such that the difference of subset sums is minimum. 
+
+...
+
+Link to [common problems](https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/) and a larger [list](https://www.geeksforgeeks.org/dynamic-programming/) of problems. 
+
+
 
