@@ -8,9 +8,42 @@ import datetime
 # to avoid chained warnings
 pd.options.mode.chained_assignment = None
 
+''' simple inspection of the data frame '''
+def inspect(data):
+    # get overall info of the data frame object
+    print(data.info()) # OBSERVATION : File has 259200 entries. ADC in proximitysensor is analog-to-digital converter(for discete values)
+    
+    # look at some sample rows
+    print(data.head(5)) # OBSERVATION : EpochTimeStamp is not in user friendly format. Convert it !
+
+    # get mean, variance, min and so on for the columns
+    print(data.describe())
+    # OBSERVATION : ProximitySensor has negative values(remove), max value is too high (remove outliers); 
+    # OBSERVATION : SampleNumber goes uptill 65k. It Probably repeats 4 times !
+
+    # Analyse the values of the quartiles of  var ProximitySensor
+    l = [0.9, 0.95, 0.97, 0.99 , 1]
+    for i, n in enumerate(l):
+        print(f"Value at quartile {n} is {data['ProximitySensor_ADC_12Bits'].quantile(n)}")
+
+    # find the number of negatives 
+    print(f"The number of negative values in ProximitySensor are :{sum(n < 0 for n in data['ProximitySensor_ADC_12Bits'])}")
+    # OBSERVATION :  360 negative values found - remove them in the preprocessing step
+
+    # Find index of value 0 in 'SampleNumber'
+    for i, n in enumerate(data['SampleNumber_16Bits']):
+        if(n == 0):
+            print(i)
+    # OBSERVATION : Zero indices found at : 0, 65536, 131072, 196608. However thats because we reach a limit of sample number since its 16bits
+
+    # check if entire data frame has NaN values 
+    print(f"Are there any NaN values in the DF :{data.isnull().values.any()}")  # OBSERVATION : no NaN values were found
+
+    # OBSERVATION : The data is collected on 3 days, 2019-05-06, 2019-05-07, 2019-05-08. The last observation for 9th May can be removed
 
 
 def generate_save_plot(data, save_path):
+    inspect(data)
     return 1
 
 
