@@ -41,9 +41,34 @@ def inspect(data):
 
     # OBSERVATION : The data is collected on 3 days, 2019-05-06, 2019-05-07, 2019-05-08. The last observation for 9th May can be removed
 
+''' function performs the preproceesing of the data frame'''
+def preprocess(data):
+    # change 10 digit time column to proper date-time format.
+    data['EpochTimestamp'] = pd.to_datetime(data['EpochTimestamp'], unit='s')
+
+    # last row is dropped since it is the only data for day 2019-05-09
+    data = data[:-1]
+    
+    # find the mean ProximitySensor
+    mean_dist = data['ProximitySensor_ADC_12Bits'].mean()
+    std_dist = data['ProximitySensor_ADC_12Bits'].std()
+
+    # Convert the negative values  and values > mean + std from var [ProximitySensor] to mean value.
+    data['ProximitySensor_ADC_12Bits'][(data['ProximitySensor_ADC_12Bits'] < 0) | (data['ProximitySensor_ADC_12Bits'] > mean_dist+std_dist)] = mean_dist
+
+    # Split 'EpochTimestamp' col into two others which capture the date and time respectively. Time converted to str to enable plotting
+    data['Date'] = [d.date() for d in data['EpochTimestamp']]
+    data['Time'] = [d.strftime("%H:%M") for d in data['EpochTimestamp']]
+    # data['Time'] = [d.time() for d in data['EpochTimestamp']]
+    
+    return data
 
 def generate_save_plot(data, save_path):
-    inspect(data)
+    # # manual inspection of the data
+    # inspect(data)
+
+    # perform preprocessing steps
+    data = preprocess(data)
     return 1
 
 
