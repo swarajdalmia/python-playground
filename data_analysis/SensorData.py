@@ -69,7 +69,45 @@ def generate_save_plot(data, save_path):
 
     # perform preprocessing steps
     data = preprocess(data)
-    return 1
+
+    # the data frame is split into 3 dataframes on the basis of the date. 
+    day_1 = data[data['Date'] == datetime.date(2019, 5, 6)]
+    day_1 = day_1.filter(['Time', 'ProximitySensor_ADC_12Bits'])
+    day_1.set_index('Time')
+
+    day_2 = data[data['Date'] == datetime.date(2019, 5, 7)]
+    day_2 = day_2.filter(['Time', 'ProximitySensor_ADC_12Bits'])
+    day_2.set_index('Time')
+
+    day_3 = data[data['Date'] == datetime.date(2019, 5, 8)]
+    day_3 = day_3.filter(['Time', 'ProximitySensor_ADC_12Bits'])
+    day_3.set_index('Time')
+
+    print("Plot being generated.")
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, sharey=True)
+    # frame added to centre 
+    fig.add_subplot(111, frameon=False)
+    # avoid the ticks for the above frame
+    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
+
+    day_1.plot(x="Time", ax = ax1, color='blue')
+    ax1.legend(['2019-05-06'])
+    ax1.set_xlabel(None)
+
+    day_2.plot(x="Time", ax = ax2, color='green')
+    ax2.legend(['2019-05-07'])
+    ax2.set_xlabel(None)
+
+    day_3.plot(x="Time", ax = ax3, color='red')
+    ax3.legend(['2019-05-08'])
+    ax3.set_xlabel(None)
+
+    plt.xlabel("Time (hrs:mins) ")
+    plt.ylabel("Sensor Distance")
+    plt.grid(b=None)
+
+    plt.savefig(save_path)  
+    print("Plot saved.")
 
 
 if __name__ == "__main__":
