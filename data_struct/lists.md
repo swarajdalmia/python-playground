@@ -8,7 +8,7 @@ Python lists are a collection of items in a particular order. The items don't ha
 - Lists are mutable.
 - Lists are dynamic.
 
-The low level complexity of operations on Lists, Sets and Dictionaries can be found {here}[https://www.ics.uci.edu/~brgallar/week8\_2.html].
+The low level complexity of operations on Lists, Sets and Dictionaries can be found [here](https://www.ics.uci.edu/~brgallar/week8\_2.html).
 
 len(arr) - returns the length of list object. 
 List indeing starts with index 0 and is circular(to a certain extent), so -1 points to last element, but index len will give error out of bounds.  
@@ -64,17 +64,9 @@ type(var) : to check the type
 - When you don’t want data to be modified.
 
 
-For tuple, packing and unpacking look [here]{https://realpython.com/python-lists-tuples/}.
+For tuple, packing and unpacking look [here](https://realpython.com/python-lists-tuples/).
 In Python, variable swap can be done with a single tuple assignment:
 ```
 a, b = b, a
 ```
-
-
-
-
-
-
-
-
 
