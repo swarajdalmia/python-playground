@@ -7,6 +7,7 @@ A dictionary is "an associative array, where arbitrary keys are mapped to values
     - Keys, must me of hashable type i.e. they should have a hash value that never changes. Since the key objects need to be hashable they can't be mutable objects. Hashable keys make dictionary inserts and lookups more efficient. If the key is not hashable, in order to find a particular key you have to (in the worst case) read and compare for equality all keys in the dictionary.
     - There are no restriction on the values. 
     - Dictionaries arew mutable data structures. Therefore they can't be used as keys to other dicts.
+    - the keys dont have to be of the same type either !
 
 Dictionaries are a cornerstone of Python. The language itself is built around dictionaries. Modules, classes, objects, globals(), locals(): all of these are dictionaries. Dictionaries have been central to Python from its very beginning.
 
@@ -15,6 +16,20 @@ To visualize the methods and attributes of any Python object, you can use dir(),
 Unlike sequences, lists, dictionaries are indexed by keys and not integer indices.
 
 - Given a key k, the corresonding value can be got by using dict[k]. Similar syntax as list indexing. 
+
+## Declaring Dictionaries 
+
+
+```
+d = {} # empty dictionary in python
+another_dict = dict([(1, 'Geeks'), (2, 'For')]) # creating a dictionary from tuples
+thisdict = {"brand": "Ford", "model": "Mustang", "year": 1964}
+
+# adding to a dictionary
+thisdict["color"] = "red"
+
+
+```
 
 ## Iterating through Dictionaries
 
