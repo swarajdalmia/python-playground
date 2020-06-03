@@ -22,7 +22,7 @@ Lists, tuples, dictionaries, sets, strings are all iterable objects. They are it
 mytuple = ("apple", "banana", "cherry")
 myit = iter(mytuple)
 
-# If there are no more elements on using next() a StopIteration Exception is raised. The StopIteration exception will cease the for loop and in user defined iterators within [next]{http://zetcode.com/lang/python/itergener/}.
+# If there are no more elements on using next() a StopIteration Exception is raised. The StopIteration exception will cease the for loop and in user defined iterators within [next](http://zetcode.com/lang/python/itergener/).
 
 print(next(myit))
 print(next(myit))
@@ -30,7 +30,7 @@ print(next(myit))
 
 ```
 
-- To create a User Defined iterator. Look at example [here]{https://www.w3schools.com/python/python\_iterators.asp]
+- To create a User Defined iterator. Look at example [here](https://www.w3schools.com/python/python\_iterators.asp)
 
 
 # Generators
@@ -41,7 +41,7 @@ Generators simplifies creation of iterators and are special routines which retur
 - Use the yield keyword
 - May use several yield keywords 
 
-[Example]{http://zetcode.com/lang/python/itergener/}.
+[Example](http://zetcode.com/lang/python/itergener/).
 
 The yield keyword exits the generator and returns a value. To reach the first and successive yield lines one has to use the next function. When there is nothing left to yield, a StopIteration exception is raised.
 
@@ -57,7 +57,7 @@ Creating a list comprehension in this case would be very inefficient because the
 
 # Itertools 
 
-The itertools module in the standard library provides lot of intersting tools to work with [iterators]{https://anandology.com/python-practice-book/iterators.html}.
+The itertools module in the standard library provides lot of intersting tools to work with [iterators](https://anandology.com/python-practice-book/iterators.html).
 
 - itertools.chain() : to chain multiple iterators, i.e. append one after the other.
 - izip : iterable version of zip
