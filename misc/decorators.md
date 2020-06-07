@@ -115,19 +115,18 @@ def decorator(func):
 ## More Complex Decorators Applications
 
 Decorating classes:
-- 
+- it is possible to decorate the entire class. One dynamically changes a class defn, and it can be used instead of meta classes.
 
+Nesting Decorators:
+- One can apply several decorators to a function by stacking them on top of one another. 
 
+One can also pass arguments to the decorator. Decorator args, function args can be seperated. 
+- One can also define decorators that can be used both with and without arguments 
 
+Stateful Decorators:
+- a decorator that can keep track of state by using function attributes, func\_name.var\_name. However, the typical way to maintain state is by using classes. Examples of using both are shown in the tutorial. 
 
-
-
-
-
-
-
-
-
-
+Decorators can provide a nice mechanism for caching and memoization.
+- In the standard library, a Least Recently Used (LRU) cache is available as @functools.lru\_cache which one can use.
 
 
