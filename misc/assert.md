@@ -36,3 +36,4 @@ Rules of thumb:
 - The answer is to never use as- sertions to do data validation. Instead, we could do our validation with regular if-statements and raise validation exceptions if necessary.
 - Asserts that never fail : When you pass a tuple as the first argument in an assert statement, the assertion always evaluates as true and therefore never fails.
 
+
