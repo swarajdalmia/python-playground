@@ -131,8 +131,43 @@ Look [here](https://realpython.com/instance-class-and-static-methods-demystified
 Note : Please note that naming these parameters self and cls is just a convention. You could just as easily name them the\_object and the\_class and get the same result. All that matters is that they’re positioned first in the parameter list for the method.
 
 
+## Super()
+
+While the official documentation is fairly technical, at a high level super() gives you access to methods in a superclass from the subclass that inherits from it. super() alone returns a temporary object of the superclass that then allows you to call that superclass’s methods. 
+
+```
+# Here we declare that the Square class inherits from the Rectangle class
+class Square(Rectangle):
+    def __init__(self, length):
+        super().__init__(length, length)  # calling the superclass init with super 
+```
+
+Unless init is explicitly defined in the child class, the init of the super class if called.
+
+Super can also be used to call the methods of the super class, as shown below:
+```
+class Cube(Square):
+    def surface_area(self):
+        face_area = super().area()
+        return face_area * 6
+```
+
+-  super(Square, self) call is equivalent to the parameterless super() call.
+
+For use of super() in details and wrt multiple inheritance look [here](https://realpython.com/python-super/).
+
+## '__str__' and '__repr__' Special Methods
+
+They are called dunder methods.
+'__str__' is a special method, like '__init__', that is supposed to return a string representation of an object when print(\<obj\>) is called.
+
+Inspecting an object in a Python interpreter session simply prints the result of the object’s '__repr__'.
 
 
+## Future work 
 
+- Are there ways to define private attributes/methods in a class that arent inherited 
+- the concept of anstract class 
+- Polymorphism in python 
 
 
