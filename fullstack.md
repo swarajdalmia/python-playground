@@ -1,6 +1,6 @@
 # Fullstack in Python 
 
-Notes taken while browsing [this website](https://www.fullstackpython.com/).
+<strike>Notes taken while browsing [this website](https://www.fullstackpython.com/)</strike>.
 
 ## Introduction 
 
@@ -40,5 +40,31 @@ Python resources:
 Podcasts:
 - python specific podcasts with specific interesting episodes.
 - some interesting software engineering podcasts. [git podcast](https://www.allthingsgit.com/archives/), [command line heroes](https://www.redhat.com/en/command-line-heroes/season-3), [full stack radio](https://www.fullstackradio.com/).
+
+
+Videos:
+- PyCon US, EuroPython, PyVideo
+
+Development Envionments:
+- Videos:
+- PyCon US, EuroPython, PyVideoVideos:
+- PyCon US, EuroPython, PyVideo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
