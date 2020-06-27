@@ -1,7 +1,3 @@
-# Fullstack in Python 
-
-<strike>Notes taken while browsing [this website](https://www.fullstackpython.com/)</strike>.
-
 ## Introduction 
 
 Learning Programming
@@ -51,20 +47,33 @@ Development Envionments:
 - PyCon US, EuroPython, PyVideo
 
 
+## Development Envionments 
 
+Settind up a workspace:
+- [An example of setting up a python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14) 
+- [Using pyenv to manage and install different versions of python](https://anil.io/blog/python/pyenv/using-pyenv-to-install-multiple-python-versions-tox/)
+- [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac)
 
+Editors:
+- [Build your own text editor](https://viewsourcecode.org/snaptoken/kilo/) provides an awesome tutorial for creating a basic editor in the C programming language. 
+- [Xi: an editor for the next 20 years](https://www.recurse.com/events/localhost-raph-levien)
 
+..
+..
 
-
-
-
-
-
-
-
-
-
-
+Web Development:
+- [How the Internet works](https://thesquareplanet.com/blog/how-the-internet-works/)
+- [Domain Name Systems explained](https://webhostinggeeks.com/guides/dns/)
+- [Short History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)
+- [Web Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
+- [Evolution of the Web - Nice Animated Timeline](http://www.evolutionoftheweb.com/)
+- [What happens when you type in Google and Search](https://github.com/alex/what-happens-when)
+- [How web development has improved](https://www.oreilly.com/radar/web-application-development-is-different-and-better/)
+- [a web application from scratch](https://defn.io/2018/02/25/web-app-from-scratch-01/)
+- [Web browser architecture expained](https://medium.com/@camaelon/what-s-in-a-web-browser-83793b51df6c)
+- [What is a browser engine](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/)
+- [History of the URL and how it works](https://eager.io/blog/the-history-of-the-url-path-fragment-query-auth/)
+-  
 
 
 
