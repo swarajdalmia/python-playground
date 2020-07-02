@@ -40,4 +40,50 @@ from pizza import make_pizza as mp
 - importing all functions form a module `from pizza import *`. However, it’s best not to use this approach when you’re working with larger modules that you didn’t write: if the module has a function name that matches an existing name in your project, you can get some unexpected results. Python may see several functions or variables with the same name, and instead of importing all the functions separately, it will overwrite the functions.
 The best approach is to import the function or functions you want, or import the entire module and use the dot notation. This leads to clear code that’s easy to read and understand.
 
+## Styling Functions 
+
+Functions should have descriptive names, and these names should use lowercase letters and underscores. 
+
+- Documentation: Every function should have a comment that explains concisely what the function does. This comment should appear immediately after the function definition and use the docstring format. In a well-documented function, other programmers can use the function by reading only the description in the docstring. They should be able to trust that the code works as described, and as long as they know the name of the function, the arguments it needs, and the kind of value it returns, they should be able to use it in their programs.
+- If you specify a default value for a parameter, no spaces should be used on either side of the equal sign.
+- PEP 8 recommends that you limit lines of code to 79 characters. If a set of parameters causes a function’s definition to be longer than 79 characters, press enter after the opening parenthesis on the definition line. On the next line, press tab twice to separate the list of arguments from the body of the function, which will only be indented one level.
+
+## Docstring format 
+ 
+There are many formats out there but reST is [recommended](https://stackoverflow.com/questions/3898572/what-is-the-standard-python-docstring-format) by the PEP 287. 
+Example: 
+```
+"""
+This is a reST style.
+
+:param param1: this is a first param
+:param param2: this is a second param
+:returns: this is a description of what is returned
+:raises keyError: raises an exception
+"""
+```
+
+Google's style is also useful to use for readability sake. 
+Example:
+```
+"""
+This is an example of Google style.
+
+Args:
+    param1: This is the first param.
+    param2: This is a second param.
+
+Returns:
+    This is a description of what is returned.
+
+Raises:
+    KeyError: Raises an exception.
+"""
+```
+
+It is nice to also include the type. 
+```
+Args: 
+    param1(str): This is the first param. 
+```
 
